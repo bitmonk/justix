@@ -4,11 +4,11 @@ version = "0.1.0"
 authors = ["Justin Alan Ryan <justin.alan.ryan@gmail.com>"]
 edition = "2018"
 
-[dependencies]
-
 [profile.dev]
 panic = "abort"
 
 [profile.release]
 panic = "abort"
 
+[dependencies]
+bootloader = "0.2.0-alpha"
