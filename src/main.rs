@@ -4,6 +4,7 @@
 
 use core::panic::PanicInfo;
 mod vga_buffer;
+mod serial;
 
 #[cfg(not(test))]
 #[panic_handler]
@@ -15,6 +16,7 @@ fn panic(_info: &PanicInfo) -> ! {
 #[cfg(not(test))]
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
+  serial_println!("Hello Host{}", "!");
   println!("Hello World{}", "!");
 
   loop {}
