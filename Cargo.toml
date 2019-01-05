@@ -10,5 +10,8 @@ panic = "abort"
 [profile.release]
 panic = "abort"
 
+[package.metadata.bootimage]
+default-target = "x86_64-justix.json"
+
 [dependencies]
-bootloader = "0.2.0-alpha"
+bootloader = "0.3.4"
