@@ -23,10 +23,11 @@ fn panic(_info: &PanicInfo) -> ! {
 #[cfg(not(test))]
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-  serial_println!("Hello Host{}", "!");
-  println!("Hello World{}", "!");
+  vga_buffer::print_something();
+//  serial_println!("Hello Host{}", "!");
+//  println!("Hello World{}", "!");
 
-  unsafe { exit_qemu(); }
+//   unsafe { exit_qemu(); }
 
   loop {}
 }
