@@ -13,6 +13,9 @@ panic = "abort"
 [package.metadata.bootimage]
 default-target = "x86_64-justix.json"
 
+[features]
+integration-test = []
+
 [dependencies]
 bootloader = "0.3.4"
 volatile = "0.2.3"
