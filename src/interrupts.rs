@@ -1,8 +1,13 @@
 use x86_64::structures::idt::{InterruptDescriptorTable, ExceptionStackFrame};
 use crate::println;
 
+static mut IDT: InterruptDescriptorTAble = InterruptDescriptorTable::new();
+
 pub fn init_idt() {
-    let mut idt = InterruptDescriptorTable::new();
+    unsafe {
+        IDT.breakpoint.set_handler_fn(breakpoint_handler);
+        IDT.load();
+    }
 }
 
 extern "x86-interrupt" fn breakpoint_handler(
