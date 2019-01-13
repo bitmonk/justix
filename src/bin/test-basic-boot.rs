@@ -8,7 +8,7 @@ use justix::{exit_qemu, serial_println};
 #[cfg(not(test))]
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    serial_println!("ok");
+    serial_println!("basic boot ok!");
     unsafe { exit_qemu(); }
     loop {}
 }
