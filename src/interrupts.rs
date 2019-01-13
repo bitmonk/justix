@@ -1,7 +1,7 @@
 use x86_64::structures::idt::{InterruptDescriptorTable, ExceptionStackFrame};
 use crate::println;
 
-static mut IDT: InterruptDescriptorTAble = InterruptDescriptorTable::new();
+static mut IDT: InterruptDescriptorTable = InterruptDescriptorTable::new();
 
 pub fn init_idt() {
     unsafe {
