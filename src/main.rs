@@ -6,7 +6,6 @@ use core::panic::PanicInfo;
 use justix::println;
 use justix::vga_buffer;
 use justix::serial_println;
-use justix::exit_qemu;
 
 #[cfg(not(test))]
 #[panic_handler]
